@@ -3,6 +3,8 @@ import sklearn as sk
 import pandas as pd 
 import os
 
+# this script actually creates a dict of dicts (FPTS of Player), which causes an error when trying to remove players 
+
 os.chdir("C:\\Users\\tkalnik\\Desktop\\FantasyFooty")
 
 QB = pd.DataFrame(pd.read_excel("FantasyPros_Fantasy_Football_Projections_All.xlsx", sheet_name="QB_short"))
