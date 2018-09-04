@@ -7,18 +7,6 @@ os.chdir("C:\\Users\\tkalnik\\Desktop\\FantasyFooty")
 
 DF = pd.DataFrame(pd.read_excel("FantasyPros_Fantasy_Football_Projections_All.xlsx", sheet_name="Combined"))
 
-### Pandas column attributes
-# print(DF.Player)
-# print(DF.FPTS)
-
-### Pandas iloc
-# Prints just the first entry
-# print(DF.iloc[:1])
-
-### Pandas loc
-# prints the first 50
-# print(DF.loc[0:50])
-
 QB = {}
 RB = {} 
 WR = {}
@@ -59,3 +47,31 @@ print(WR, '\n')
 print(TE, '\n')
 print(K, '\n')
 print(DST, '\n')
+
+count = 583
+try:
+	while count > 0:
+		a = input("Enter the name of the player that was selected: ")
+		if a in QB:
+			del QB[a]
+			print(QB, '\n')
+		elif a in RB:
+			del RB[a]
+			print(RB, '\n')
+		elif a in WR:
+			del WR[a]
+			print(WR, '\n')
+		elif a in TE:
+			del TE[a]
+			print(TE, '\n')
+		elif a in K:
+			del K[a]
+			print(K, '\n')
+		elif a in DST:
+			del DST[a]
+			print(DST, '\n')
+		else:
+			print("Error")
+		count -= 1
+except KeyboardInterrupt:
+	pass
